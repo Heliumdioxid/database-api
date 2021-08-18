@@ -3,7 +3,6 @@ package de.heliumdioxid.databaseapi.mongo;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoDatabase;
-import de.heliumdioxid.databaseapi.api.ConnectionHandler;
 import de.heliumdioxid.databaseapi.api.DatabaseConnection;
 import de.heliumdioxid.databaseapi.mongo.config.MongoConnectionConfig;
 import lombok.Getter;
@@ -14,7 +13,7 @@ import java.util.concurrent.CompletableFuture;
 
 @Getter
 @RequiredArgsConstructor
-public class MongoDatabaseConnection implements DatabaseConnection {
+public class MongoDatabaseConnection implements DatabaseConnection<MongoConnectionHandler> {
 
     private MongoClient mongoClient;
     private MongoDatabase mongoDatabase;
@@ -24,7 +23,7 @@ public class MongoDatabaseConnection implements DatabaseConnection {
 
     /** {@inheritDoc} */
     @Override
-    public CompletableFuture<Optional<ConnectionHandler>> connect() {
+    public CompletableFuture<Optional<MongoConnectionHandler>> connect() {
         return isConnected().thenApplyAsync(connected -> {
             if (connected) {
                 if (this.mongoConnectionHandler == null)
@@ -62,7 +61,7 @@ public class MongoDatabaseConnection implements DatabaseConnection {
 
     /** {@inheritDoc} */
     @Override
-    public Optional<ConnectionHandler> getConnectionHandler() {
+    public Optional<MongoConnectionHandler> getConnectionHandler() {
         if (this.mongoConnectionHandler == null)
             return Optional.empty();
 

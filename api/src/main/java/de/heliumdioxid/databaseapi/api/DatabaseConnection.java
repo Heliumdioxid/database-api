@@ -4,13 +4,13 @@ import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 
 /** Represents a connection to a database */
-public interface DatabaseConnection {
+public interface DatabaseConnection<E extends ConnectionHandler> {
 
     /**
      * Connects to a database
      * @return optional of {@link ConnectionHandler} of the database-connection
      */
-    CompletableFuture<Optional<ConnectionHandler>> connect() ;
+    CompletableFuture<Optional<E>> connect();
 
     /**
      * Disconnects from a database
@@ -28,6 +28,6 @@ public interface DatabaseConnection {
      * Gets the {@link ConnectionHandler} of an active database-connection
      * @return {@link ConnectionHandler} of an active database-connection
      */
-    Optional<ConnectionHandler> getConnectionHandler();
+    Optional<E> getConnectionHandler();
 
 }

@@ -1,7 +1,6 @@
 package de.heliumdioxid.databaseapi.mysql;
 
 import com.zaxxer.hikari.HikariDataSource;
-import de.heliumdioxid.databaseapi.api.ConnectionHandler;
 import de.heliumdioxid.databaseapi.api.DatabaseConnection;
 import de.heliumdioxid.databaseapi.mysql.config.MySQLConnectionConfig;
 import lombok.Getter;
@@ -14,7 +13,7 @@ import java.util.concurrent.CompletableFuture;
 
 @Getter
 @RequiredArgsConstructor
-public class MySQLDatabaseConnection implements DatabaseConnection {
+public class MySQLDatabaseConnection implements DatabaseConnection<MySQLConnectionHandler> {
 
     private HikariDataSource hikariDataSource;
     private MySQLConnectionHandler mySQLConnectionHandler;
@@ -23,7 +22,7 @@ public class MySQLDatabaseConnection implements DatabaseConnection {
 
     /** {@inheritDoc} */
     @Override
-    public CompletableFuture<Optional<ConnectionHandler>> connect() {
+    public CompletableFuture<Optional<MySQLConnectionHandler>> connect() {
         return isConnected().thenApplyAsync(connected -> {
             if (connected) {
                 if (this.mySQLConnectionHandler == null)
@@ -59,7 +58,7 @@ public class MySQLDatabaseConnection implements DatabaseConnection {
 
     /** {@inheritDoc} */
     @Override
-    public Optional<ConnectionHandler> getConnectionHandler() {
+    public Optional<MySQLConnectionHandler> getConnectionHandler() {
         if (this.mySQLConnectionHandler == null)
             return Optional.empty();
 

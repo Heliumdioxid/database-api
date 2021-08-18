@@ -1,6 +1,5 @@
 package de.heliumdioxid.databaseapi.redis;
 
-import de.heliumdioxid.databaseapi.api.ConnectionHandler;
 import de.heliumdioxid.databaseapi.api.DatabaseConnection;
 import de.heliumdioxid.databaseapi.redis.config.RedisConnectionConfig;
 import lombok.Getter;
@@ -11,12 +10,12 @@ import java.util.concurrent.CompletableFuture;
 
 @Getter
 @RequiredArgsConstructor
-public class RedisDatabaseConnection implements DatabaseConnection {
+public class RedisDatabaseConnection implements DatabaseConnection<RedisConnectionHandler> {
 
     private final RedisConnectionConfig redisConnectionConfig;
 
     @Override
-    public CompletableFuture<Optional<ConnectionHandler>> connect() {
+    public CompletableFuture<Optional<RedisConnectionHandler>> connect() {
         return null;
     }
 
@@ -31,7 +30,7 @@ public class RedisDatabaseConnection implements DatabaseConnection {
     }
 
     @Override
-    public Optional<ConnectionHandler> getConnectionHandler() {
+    public Optional<RedisConnectionHandler> getConnectionHandler() {
         return Optional.empty();
     }
 
