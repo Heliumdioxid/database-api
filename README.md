@@ -1,5 +1,5 @@
 ### database-api
-a simple and async java-library for mysql and mongodb database-connections
+simple and async java-library for mysql and mongodb database-connections
 
 <br>
 
@@ -8,7 +8,7 @@ a simple and async java-library for mysql and mongodb database-connections
 <repositories>
     <repository>
         <id>github</id>
-        <name>GitHub</name>
+        <name>GitHub Packages Heliumdioxid</name>
         <url>https://maven.pkg.github.com/Heliumdioxid/database-api</url>
     </repository>
 </repositories>
@@ -32,13 +32,14 @@ ConnectionData connectionData = new ConnectionData("127.0.0.1", "username", "pas
 MySQLConnectionConfig mySQLConnectionConfig = new MySQLConnectionConfig(connectionData).applyDefaultHikariConfig(); // recommanded setting for HikariCP
 MySQLDatabaseConnection mySQLDatabaseConnection = new MySQLDatabaseConnection(mySQLConnectionConfig);
 
-<Optional<MySQLConnectionHandler>> optionalMySQLConnectionHandler = mySQLDatabaseConnection.connect().join();
-MySQLConnectionHandler mySQLConnectionHandler = mySQLDatabaseConnection.getConnectionHandler();
+MySQLConnectionHandler mySQLConnectionHandler;
+mySQLConnectionHandler = mySQLDatabaseConnection.connect().join().get(); // connect - check if a value is present in the optional
+mySQLConnectionHandler = mySQLDatabaseConnection.getConnectionHandler().get(); // or get the MySQLConnectionHandler with this method
 
 // use the MySQLConnectionHandler for communicating with the mysql-database
 UpdateResult updateResult = mySQLConnectionHandler.executeUpdate("query"); // execute an update
-boolean included = mySQLConnectionHandler.executeQuery(resultSet -> resultSet.next(), false, "query"); // executes a query applies the result to a funtional interface
-        
+boolean included = mySQLConnectionHandler.executeQuery(resultSet -> resultSet.next(), false, "query"); // executes a query and applies the result to a funtional interface
+
 // close mysql-database-connection
 mySQLDatabaseConnection.disconnect();
 ```
@@ -49,11 +50,13 @@ ConnectionData connectionData = new ConnectionData("127.0.0.1", "username", "pas
 MongoConnectionConfig mongoConnectionConfig = new MongoConnectionConfig(connectionData).applyDefaultMongoClientSettings(); // applies default properties like the uri
 MongoDatabaseConnection mongoDatabaseConnection = new MongoDatabaseConnection(mongoConnectionConfig);
 
-<Optional<MongoConnectionHandler>> optionalMongoConnectionHandler = mongoDatabaseConnection.connect().join();
-MongoConnectionHandler mongoConnectionHandler = mongoDatabaseConnection.getConnectionHandler();
+MongoConnectionHandler mongoConnectionHandler;
+mongoConnectionHandler = mongoDatabaseConnection.connect().join().get(); // connect - check if a value is present in the optional
+mongoConnectionHandler = mongoDatabaseConnection.getConnectionHandler(); // or get the MySQLConnectionHandler with this method
 
-// use the MongoConnectionHandler for communicating with the mongo-database
-<Optional<MongoConnectionHandler>> optionalDocument = mongoConnectionHandler.getDocument("collection", "fieldName", "value").join();
+// use the MongoConnectionHandler for communicating with the mongo-database (few examples)
+<Optional<MongoCollection<Document>> mongoCollection = mongoConnectionHandler.getCollection("collection").join();
+<Optional<Document>> document = mongoConnectionHandler.getDocument("collection", "fieldName", "value").join();
 
 // close mongo-database-connection
 mongoDatabaseConnection.disconnect();
