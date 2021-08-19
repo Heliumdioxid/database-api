@@ -7,19 +7,19 @@ import java.util.concurrent.CompletableFuture;
 public interface DatabaseConnection<E extends ConnectionHandler> {
 
     /**
-     * Connects to a database
+     * Connects to a database asynchronously
      * @return optional of {@link ConnectionHandler} of the database-connection
      */
     CompletableFuture<Optional<E>> connect();
 
     /**
-     * Disconnects from a database
+     * Disconnects from a database asynchronously
      * @return boolean that shows whether the database-connection could be closed
      */
     CompletableFuture<Boolean> disconnect();
 
     /**
-     * Checks if there is an active mysql-database-connection
+     * Checks asynchronously if there is an active mysql-database-connection
      * @return boolean that shows whether an active database-connection exists
      */
     CompletableFuture<Boolean> isConnected();

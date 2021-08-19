@@ -65,7 +65,7 @@ public class MySQLDatabaseConnection implements DatabaseConnection<MySQLConnecti
         return Optional.of(this.mySQLConnectionHandler);
     }
 
-    /** Gets the {@link Connection} of the {@link MySQLDatabaseConnection#getHikariDataSource()}
+    /** Gets the {@link Connection} of the {@link MySQLDatabaseConnection#getHikariDataSource()} asynchronously
      * @return optional of the connection
      */
     public CompletableFuture<Optional<Connection>> getConnection() {

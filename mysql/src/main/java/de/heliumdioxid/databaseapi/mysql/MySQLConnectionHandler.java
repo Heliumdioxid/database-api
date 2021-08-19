@@ -20,7 +20,7 @@ public class MySQLConnectionHandler extends ConnectionHandler<MySQLDatabaseConne
     }
 
     /**
-     * Executes a query
+     * Executes a query synchronously
      * @param query Query to be executed
      * @param function FunctionalInterface {@link Function}
      * @param defaultValue default return value on failure
@@ -41,7 +41,7 @@ public class MySQLConnectionHandler extends ConnectionHandler<MySQLDatabaseConne
     }
 
     /**
-     * Executes a query
+     * Executes a query synchronously
      * @param function FunctionalInterface {@link Function}
      * @param defaultValue default return value on failure
      * @param query Query to be executed
@@ -69,7 +69,7 @@ public class MySQLConnectionHandler extends ConnectionHandler<MySQLDatabaseConne
     }
 
     /**
-     * Executes an update
+     * Executes an update synchronously
      * @param query Query to be executed
      * @return {@link UpdateResult} result of the update-execution
      */
@@ -84,7 +84,7 @@ public class MySQLConnectionHandler extends ConnectionHandler<MySQLDatabaseConne
     }
 
     /**
-     * Executes an update
+     * Executes an update synchronously
      * @param query Query to be executed
      * @param parameters Parameters for query
      * @return {@link UpdateResult} result of the update-execution

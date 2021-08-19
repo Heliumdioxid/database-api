@@ -12,7 +12,6 @@
         <module>mysql</module>
         <module>mongo</module>
         <module>api</module>
-        <module>redis</module>
     </modules>
 
     <properties>
