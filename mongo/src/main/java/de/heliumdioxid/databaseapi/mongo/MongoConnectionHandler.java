@@ -115,11 +115,11 @@ public class MongoConnectionHandler extends ConnectionHandler<MongoDatabaseConne
     }
 
     /**
-     * Gets the fist {@link Document} of a MongoCollection with the given filter asynchronously
+     * Gets the first {@link Document} of a MongoCollection with the given filter asynchronously
      * @param collection name of the collection
      * @param fieldName name of the field in the collection
      * @param value value of the given field in the collection
-     * @return fist found {@link Document}
+     * @return first found {@link Document}
      */
     public CompletableFuture<Optional<Document>> getDocument(final String collection, final String fieldName, final Object value) {
         return getCollection(collection).thenApplyAsync(optionalMongoCollection -> optionalMongoCollection.map(mongoCollection -> mongoCollection.find(Filters.eq(fieldName, value)).first()));
