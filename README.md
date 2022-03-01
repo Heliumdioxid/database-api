@@ -2,10 +2,10 @@
 
 # database-api
 
-![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/Heliumdioxid/database-api?color=%23178fff&include_prereleases&label=version&style=flat)
-![GitHub](https://img.shields.io/github/license/Heliumdioxid/database-api?color=%232f3332&style=flat)
-![GitHub issues](https://img.shields.io/github/issues/Heliumdioxid/database-api?color=%23113782)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/Heliumdioxid/database-api?color=%234458f2)
+![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/Heliumdioxid/database-api?color=%23178fff&include_prereleases&label=version&style=flat-square)
+![GitHub](https://img.shields.io/github/license/Heliumdioxid/database-api?color=%232f3332&style=flat-square)
+![GitHub issues](https://img.shields.io/github/issues/Heliumdioxid/database-api?color=%23113782&style=flat-square)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/Heliumdioxid/database-api?color=%234458f2&style=flat-square)
 
 a simple and <b>async</b> java-library for mysql and mongodb <b>database-connections</b>
 
