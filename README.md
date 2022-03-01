@@ -11,6 +11,7 @@ a simple and <b>async</b> java-library for mysql and mongodb <b>database-connect
 
 It is an easy-to-use library that (until now) can connect to mysql and mongodb databases.<br>
 In addition, interactions with databases are simplified.
+Feel free to leave a ⭐ if you appreciate the work.
 
 [getting started](#-installation) •
 [report a bug](#%EF%B8%8F-contributing) •
