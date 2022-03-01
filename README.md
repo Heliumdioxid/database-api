@@ -12,21 +12,26 @@ a simple and <b>async</b> java-library for mysql and mongodb <b>database-connect
 It is an easy-to-use library that (until now) can connect to mysql and mongodb databases.<br>
 In addition, interactions with databases are simplified.
 
-[getting started](#-getting-started) •
-[report a bug](#configuration) •
-[feature request](#third-party-integrations)
+[getting started](#-installation) •
+[report a bug](#%EF%B8%8F-contributing) •
+[feature request](#%EF%B8%8F-contributing)
 
 </div>
 
 ---
 
 ## Table of Contents
-- [🧪 Installation](#-getting-started)
+- [🧪 Installation](#-installation)
 - [📖 Code examples](#-code-examples)
-- [🗺️ Project structure](#%EF%B8%8F-project-structure)
+    - [📍 MySQL](#mysql-database-connection)
+    - [📍 MongoDB](#mongo-database-connection)
 - [⌛ Pending tasks](#-pending-tasks)
-- [📜 License](#-license)
+- [🗺️ Contributing](#%EF%B8%8F-contributing)
 - [☎️ Contact](#%EF%B8%8F-contact)
+- [📜 License](#-license)
+<!--
+- [🗺️ Project structure](#)
+-->
 
 ---
 
@@ -157,12 +162,30 @@ The connection can finally be closed by calling this method:
 ```java
 mongoDatabaseConnection.disconnect();
 ```
+---
+
+## ⌛ Pending tasks
+> 🤖 Please suggest features that we should still include in the api.
+> Read [Contributing](#%EF%B8%8F-contributing) for details.
+- [ ] test mongo-database-module
+- [ ] \(Optional) integrate other databases into the api
+
+---
+
+## 🗺️ Contributing
+Before submitting issues and pull requests please read the [CONTRIBUTING.md](CONTRIBUTING.md) file.
+Please follow these guidelines to make life easier for all of us.
 
 ---
 
 ## 📜 License
 database-api is distributed under the terms of the `MIT License`. A complete version of the license is available in the [LICENSE.md](LICENSE.md) in this repository. Any contribution made to this project will be licensed under the `MIT License`.<br>
 All files are Copyright © 2022 Florian H. and all contributors.
+
+---
+
+## ☎️ Contact
+You can contact me via Discord: Heliumdioxid#3963
 
 <!--
 *** ---
@@ -186,9 +209,6 @@ All files are Copyright © 2022 Florian H. and all contributors.
 *** - [ ] \(Optional) integrate other databases into the api
 *** 
 *** ---
-*** 
-*** ## ☎️ Contact
-*** You can contact me via Discord: Heliumdioxid#3963
 *** 
 *** 📢🪛🔧🔨⛏️🪓🔩🪨🪵⚙️⚗️🧪🧬🧫🔭💡📍📌📏⌛⏳☁️🧩♻️🎮📒📬💬📖🤖
 -->
