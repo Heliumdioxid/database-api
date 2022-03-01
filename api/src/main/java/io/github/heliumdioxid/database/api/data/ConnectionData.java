@@ -1,4 +1,4 @@
-package de.heliumdioxid.databaseapi.api.data;
+package io.github.heliumdioxid.database.api.data;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

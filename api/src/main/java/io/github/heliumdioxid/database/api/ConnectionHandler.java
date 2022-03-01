@@ -1,4 +1,4 @@
-package de.heliumdioxid.databaseapi.api;
+package io.github.heliumdioxid.database.api;
 
 public abstract class ConnectionHandler<T extends DatabaseConnection> {
 

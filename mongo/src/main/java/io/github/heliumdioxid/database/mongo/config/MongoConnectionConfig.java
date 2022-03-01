@@ -1,8 +1,8 @@
-package de.heliumdioxid.databaseapi.mongo.config;
+package io.github.heliumdioxid.database.mongo.config;
 
 import com.mongodb.ConnectionString;
 import com.mongodb.MongoClientSettings;
-import de.heliumdioxid.databaseapi.api.data.ConnectionData;
+import io.github.heliumdioxid.database.api.data.ConnectionData;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;

@@ -1,7 +1,7 @@
-package de.heliumdioxid.databaseapi.mysql.config;
+package io.github.heliumdioxid.database.mysql.config;
 
 import com.zaxxer.hikari.HikariConfig;
-import de.heliumdioxid.databaseapi.api.data.ConnectionData;
+import io.github.heliumdioxid.database.api.data.ConnectionData;
 import lombok.Getter;
 import lombok.Setter;
 

@@ -1,4 +1,4 @@
-package de.heliumdioxid.databaseapi.api;
+package io.github.heliumdioxid.database.api;
 
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;

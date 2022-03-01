@@ -1,8 +1,8 @@
-package de.heliumdioxid.databaseapi.mysql;
+package io.github.heliumdioxid.database.mysql;
 
 import com.zaxxer.hikari.HikariDataSource;
-import de.heliumdioxid.databaseapi.api.DatabaseConnection;
-import de.heliumdioxid.databaseapi.mysql.config.MySQLConnectionConfig;
+import io.github.heliumdioxid.database.api.DatabaseConnection;
+import io.github.heliumdioxid.database.mysql.config.MySQLConnectionConfig;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 

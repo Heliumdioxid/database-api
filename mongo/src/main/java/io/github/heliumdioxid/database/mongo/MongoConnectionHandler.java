@@ -1,4 +1,4 @@
-package de.heliumdioxid.databaseapi.mongo;
+package io.github.heliumdioxid.database.mongo;
 
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoCursor;
@@ -6,7 +6,7 @@ import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.model.Filters;
 import com.mongodb.client.result.DeleteResult;
 import com.mongodb.client.result.UpdateResult;
-import de.heliumdioxid.databaseapi.api.ConnectionHandler;
+import io.github.heliumdioxid.database.api.ConnectionHandler;
 import lombok.Getter;
 import org.bson.Document;
 import org.bson.conversions.Bson;

@@ -1,7 +1,7 @@
-package de.heliumdioxid.databaseapi.mysql;
+package io.github.heliumdioxid.database.mysql;
 
-import de.heliumdioxid.databaseapi.api.ConnectionHandler;
-import de.heliumdioxid.databaseapi.mysql.utils.Function;
+import io.github.heliumdioxid.database.mysql.utils.Function;
+import io.github.heliumdioxid.database.api.ConnectionHandler;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

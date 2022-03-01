@@ -1,4 +1,4 @@
-package de.heliumdioxid.databaseapi.mysql.utils;
+package io.github.heliumdioxid.database.mysql.utils;
 
 @FunctionalInterface
 public interface Function<ResultSet, T> {
