@@ -98,7 +98,7 @@ dependencies {
 ---
 
 ## 📖 Code examples
-First, you have to create a ConnectionData, either for a mongo or mysql connection.
+First, you have to create a `ConnectionData`, either for a mongo or mysql connection.
 You need to provide a host, username, password, database-name and port (mostly 3306 for mysql and 27017 for mongodb)
 ```java
 ConnectionData connectionData = new ConnectionData("127.0.0.1", "username", "password", "database", 3306);
@@ -108,7 +108,7 @@ ConnectionData connectionData = new ConnectionData("127.0.0.1", "username", "pas
 > 🤖 The connection to mysql-databases should work properly. 
 > If there are any errors, it would be a great help to report them.
 
-Properties must be created next, which are then passed on during the connection:
+Moreover, you have to create some properties, which are then passed on during the connection:
 ```java
 MySQLConnectionConfig mySQLConnectionConfig = new MySQLConnectionConfig(connectionData);
 mySQLConnectionConfig.applyDefaultHikariConfig() // recommended setting for HikariCP
@@ -139,7 +139,7 @@ mySQLDatabaseConnection.disconnect();
 > 🤖 The connection to mongo-databases was not testet yet. 
 > If you have tried it, I would be very grateful if you would contact me.
 
-Properties must be created next, which are then passed on during the connection:
+Moreover, you have to create some properties, which are then passed on during the connection:
 ```java
 MongoConnectionConfig mongoConnectionConfig = new MongoConnectionConfig(connectionData);
 mongoConnectionConfig.applyDefaultMongoClientSettings(); // applies default properties like the uri
