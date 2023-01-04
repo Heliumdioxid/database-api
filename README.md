@@ -179,7 +179,7 @@ Please follow these guidelines to make life easier for all of us.
 
 ## 📜 License
 database-api is distributed under the terms of the `MIT License`. A complete version of the license is available in the [LICENSE.md](LICENSE.md) in this repository. Any contribution made to this project will be licensed under the `MIT License`.<br>
-All files are Copyright © 2022 Florian H. and all contributors.
+All files are Copyright © 2023 Florian H. and all contributors.
 
 ---
 
