@@ -166,10 +166,8 @@ mongoDatabaseConnection.disconnect();
 ---
 
 ## ⌛ Pending tasks
-> 🤖 Please suggest features that we should still include in the api.
+> 🤖 Please suggest features that we should include in the api.
 > Read [Contributing](#%EF%B8%8F-contributing) for details.
-- [ ] test mongo-database-module
-- [ ] \(Optional) integrate other databases into the api
 
 ---
 
